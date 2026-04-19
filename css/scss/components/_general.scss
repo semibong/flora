@@ -1,0 +1,106 @@
+$lg: '(max-width: 992px)';
+$md: '(max-width: 768px)';
+$sm: '(max-width: 576px)';
+
+$font-main: "Bebas Neue", Arial, sans-serif;
+$font-second: "Roboto", Arial, sans-serif;
+$font-third: "Roboto Condensed", Arial, sans-serif;
+
+$color-background: #FAF7F0;
+$color-primary: #2C2C45;
+$color-secondary: #A8B2BE;
+$color-active: #77B73D;
+$color-active-secondary: #7BAE4D;
+
+html {
+    scroll-behavior: smooth;
+    font-size: calc(100vw / 1920 * 10);
+
+    @media #{$lg} {
+        font-size: calc(100vw / 768 * 10);
+    }
+
+    @media #{$md} {
+        font-size: calc(100vw / 576 * 10);
+    }
+
+    @media #{$sm} {
+        font-size: calc(100vw / 375 * 10);
+    }
+}
+
+body {
+    font-family: $font-main;
+    font-size: 1.6rem;
+    background-color: $color-background;
+    overflow-x: hidden;
+
+    &.noscroll {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+    }
+}
+
+h1, h2 {
+    font-family: $font-main;
+    font-weight: 600;
+    color: #000;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+
+    @media #{lg} {
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+
+    @media #{lg} {
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 2rem;
+    }
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin: 0;
+
+    @media #{$lg} {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+}
+
+a {
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: $color-active;
+    transition: all .2s linear;
+
+    &:hover {
+        color: $color-active-secondary;
+    }    
+}
+
+.container {
+    max-width: 138.4rem;
+    width: 100%;
+    margin: 0 auto;
+
+    @media #{$lg} {
+        width: calc(100% - 2.8rem);
+        margin: 0 1.4rem;
+    }
+}

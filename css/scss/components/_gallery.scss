@@ -1,0 +1,105 @@
+.gallery {
+    overflow: hidden;
+    margin-bottom: 16.5rem;
+
+    &__slider {
+        position: relative;
+        padding-bottom: 6.2rem;
+
+        .swiper {
+            overflow: visible;
+        }
+
+        &-arrows {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% + 19.2rem);
+            pointer-events: none;
+            z-index: 2;
+            transform: translate(-50%, -50%);
+            top: calc(50% - 3.1rem);
+            left: 50%;
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 2.4rem;
+        height: 60rem;
+        transition: opacity .7s ease-in-out, scale .7s ease-in-out, transform .7s ease-in-out;
+
+        &.swiper-slide-prev,
+        &.swiper-slide-next {
+            opacity: 0;
+            scale: 0.8;
+        }
+        
+        &.swiper-slide-prev {
+            transform: translateX(10rem);
+        }
+
+        &.swiper-slide-next {
+            transform: translateX(-10rem);
+        }
+
+        &-image {
+            display: flex;
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5rem;
+            
+            a {
+                border-radius: inherit;
+                outline: none;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: inherit;
+            }
+        }
+
+        &-block {
+            display: flex;
+            gap: 2.4rem;
+        }
+
+        .btn {
+            height: 100%;
+        }
+
+        &>.gallery__item-image {
+            width: 68rem;
+        }
+        
+        &>.gallery__item-block {
+            flex-direction: column;
+            width: 100%;
+            
+            &>.gallery__item-image {
+                height: 28.2rem;
+            }
+
+            &>.gallery__item-block {
+                height: 28.9rem;
+
+                &>.gallery__item-image {
+                    width: 32.8rem;
+                }
+
+                &>.gallery__item-block {
+                    flex-direction: column;
+
+                    &>.gallery__item-image {
+                        height: 19.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

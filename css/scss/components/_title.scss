@@ -1,0 +1,18 @@
+.title {
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 100%;
+    color: $color-primary;
+    margin: 0 0 3rem;
+
+    &-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        .title {
+            margin: 0;
+        }
+    }
+}

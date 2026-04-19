@@ -1,0 +1,152 @@
+.callback {
+    margin-bottom: 20rem;
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: end;
+        height: 57rem;
+        box-sizing: border-box;
+        padding-top: 5.3rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: calc(100% - 14rem);
+            background: url(../images/callback-bg.png) no-repeat center / cover;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 0;
+        }
+    }
+
+    &__content {
+        position: relative;
+        min-width: 101.8rem;
+        width: fit-content;
+        min-height: 40.7rem;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 3.2rem 47.5rem 6rem 7rem;
+        border-radius: 0 0 0 15rem;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(#F3ECD8, 0.9), rgba(#F6EFDF, 0.9));
+            backdrop-filter: blur(4px);
+            border-radius: inherit;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 32.3rem;
+            height: 36.7rem;
+            background: url(../images/svg/pattern.svg) no-repeat center / contain;
+            opacity: 0.7;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 9.2rem;
+        }
+
+        &-decor {
+            position: absolute;
+            pointer-events: none;
+            z-index: -2;
+            right: 0;
+            bottom: 0;
+
+            span {
+                position: absolute;
+                background-color: rgba(#fff, 0.3);
+                bottom: 0;
+
+                &:nth-of-type(1) {
+                    width: 94.1rem;
+                    height: 43.2rem;
+                    clip-path: polygon( 100% 53.668%,100% 53.668%,99.802% 61.183%,99.228% 68.313%,98.309% 74.96%,97.077% 81.031%,95.562% 86.43%,93.797% 91.061%,91.811% 94.829%,89.638% 97.638%,87.306% 99.394%,84.848% 100%,25.252% 100%,25.252% 100%,21.156% 98.989%,17.271% 96.063%,13.648% 91.381%,10.339% 85.101%,7.396% 77.383%,4.872% 68.385%,2.819% 58.267%,1.287% 47.187%,0.331% 35.305%,0% 22.78%,0% 0%,84.848% 7.336%,84.848% 7.336%,87.306% 7.942%,89.638% 9.698%,91.811% 12.507%,93.797% 16.275%,95.562% 20.906%,97.077% 26.305%,98.309% 32.376%,99.228% 39.023%,99.802% 46.153%,100% 53.668% );
+                    right: 27.8rem;
+                }
+
+                &:nth-of-type(2) {
+                    width: 86.5rem;
+                    height: 46.1rem;
+                    clip-path: polygon( 100% 56.364%,100% 56.364%,99.784% 63.442%,99.16% 70.156%,98.16% 76.417%,96.82% 82.135%,95.172% 87.219%,93.251% 91.581%,91.092% 95.129%,88.727% 97.775%,86.19% 99.429%,83.517% 100%,27.472% 100%,27.472% 100%,23.016% 99.048%,18.789% 96.292%,14.847% 91.882%,11.248% 85.968%,8.047% 78.699%,5.301% 70.224%,3.066% 60.695%,1.401% 50.26%,0.36% 39.069%,0% 27.273%,0% 0%,83.517% 12.727%,83.517% 12.727%,86.19% 13.298%,88.727% 14.952%,91.092% 17.598%,93.251% 21.147%,95.172% 25.508%,96.82% 30.593%,98.16% 36.31%,99.16% 42.571%,99.784% 49.286%,100% 56.364% );
+                    right: 29.7rem;
+                }
+
+                &:nth-of-type(3) {
+                    width: 79rem;
+                    height: 49.3rem;
+                    clip-path: polygon( 100% 59.044%,100% 59.044%,99.763% 65.688%,99.079% 71.99%,97.983% 77.866%,96.513% 83.232%,94.707% 88.004%,92.601% 92.098%,90.233% 95.429%,87.64% 97.912%,84.859% 99.464%,81.928% 100%,30.121% 100%,30.121% 100%,25.235% 99.107%,20.6% 96.52%,16.278% 92.381%,12.332% 86.83%,8.822% 80.007%,5.812% 72.054%,3.362% 63.11%,1.536% 53.316%,0.394% 42.813%,0% 31.741%,0% 0%,81.928% 18.089%,81.928% 18.089%,84.859% 18.625%,87.64% 20.177%,90.233% 22.66%,92.601% 25.991%,94.707% 30.084%,96.513% 34.856%,97.983% 40.223%,99.079% 46.099%,99.763% 52.401%,100% 59.044% );
+                    right: 31.8rem;
+                }
+            }
+        }
+    }
+
+    .form {
+        h2 {
+            font-size: 4.5rem;
+            line-height: 4.5rem;
+            color: $color-primary;
+
+            span {
+                background-image: linear-gradient(90deg, $color-active-secondary, #95BF3B);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .btn {
+            padding: 0.5rem 8.7rem 0;
+        }
+    }
+
+    &-bg {
+        position: absolute;
+        display: flex;
+        height: 100%;
+        border-radius: 15rem;
+        pointer-events: none;
+        transform: translateX(-50%);
+        top: 0;
+        left: 50%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 105.9rem;
+            height: 16.5rem;
+            background: url(../images/callback-bg-decor-1.png) no-repeat center / contain;
+            top: -7.4rem;
+            left: 10.5rem;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 67.2rem;
+            height: 71.3rem;
+            background: url(../images/callback-bg-decor-2.png) no-repeat center / contain;
+            top: -7.4rem;
+            right: 22rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: inherit;
+        }
+    }
+}

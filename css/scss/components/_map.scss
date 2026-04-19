@@ -1,0 +1,90 @@
+.map {
+    margin-bottom: 13rem;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-address {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        height: 6.7rem;
+        background-color: rgba(#fff, 0.3);
+        backdrop-filter: blur(4px);
+        box-sizing: border-box;
+        padding: 0 4rem;
+        border: #fff 0.2rem solid;
+        border-radius: 10rem;
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        p {
+            font-family: $font-third;
+            font-weight: 600;
+            font-size: 2rem;
+            color: $color-primary;
+        }
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        height: 34.5rem;
+        box-sizing: border-box;
+        border: #fff 0.5rem solid;
+        border-radius: 3rem;
+        overflow: hidden;
+
+        &:hover {
+            &::before {
+                height: calc(100% + 10rem);
+                box-shadow: inset 0px 0px 200px 100px $color-background, 0px 0px 0px 750px rgba($color-background, 0.9);
+                opacity: 0;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: calc(100% + 10rem);
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 100px 50px $color-background, 0px 0px 0px 750px rgba($color-background, 0.9);
+            pointer-events: none;
+            transition: all 0.5s ease-in-out;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        //
+        img {
+            &:first-of-type {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            &:last-of-type {
+                position: absolute;
+                width: 8.4rem;
+                height: 9.8rem;
+                object-fit: contain;
+                object-position: center;
+                filter: drop-shadow(0 0.4rem 3rem rgba(#000, 0.5));
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+            }
+        }
+        //
+    }
+}

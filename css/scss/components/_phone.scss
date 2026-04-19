@@ -1,0 +1,42 @@
+.phone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+
+    &__image {
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-top: 1rem;
+    }
+
+    &-call {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 2rem;
+        color: $color-primary;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &-order {
+        font-weight: 700;
+        font-size: 2rem;
+        background-image: linear-gradient(90deg, $color-active-secondary, #95BF3B, $color-active-secondary);
+        background-size: 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &:hover {
+            background-position: right;
+        }
+    }
+}

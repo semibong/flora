@@ -1,0 +1,60 @@
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 0.4rem;
+    width: 8.8rem;
+    height: 8.8rem;
+    margin-right: 1.5rem;
+    margin-bottom: -1.8rem;
+    rotate: -45deg;
+
+    &:has(.socials__item:nth-of-type(4)) {
+        margin-bottom: 0;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.2rem;
+        height: 4.2rem;
+        background-color: #fff;
+        transition: all .2s linear;
+
+        &:hover {
+            background-color: $color-active;
+
+            svg path {
+                fill: #fff;
+            }
+        }
+
+        &:nth-of-type(1) {
+            border-radius: 1rem 1rem 0 1rem;
+        }
+
+        &:nth-of-type(2) {
+            border-radius: 1rem 1rem 1rem 0;
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+            border-radius: 0 1rem 1rem 1rem;
+        }
+
+        &:nth-of-type(3):has(+.socials__item) {
+            border-radius: 1rem 0 1rem 1rem;
+        }
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+            rotate: 45deg;
+
+            path {
+                transition: all .2s linear;
+            }
+        }
+    }
+}

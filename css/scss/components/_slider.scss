@@ -1,0 +1,75 @@
+.slider {
+    &-arrow {
+        position: relative;
+        width: 7.2rem;
+        height: 7.2rem;
+        backdrop-filter: blur(4px);
+        border: #fff 0.4rem solid;
+        border-radius: 50%;
+        transition: all .2s linear;
+        pointer-events: all;
+        cursor: pointer;
+        outline: none;
+
+        &.swiper-button-disabled {
+            cursor: default;
+            pointer-events: none;
+
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &:hover {
+            background-color: rgba(lightgreen, 0.3);
+            border-color: rgba($color-active, 0.5);
+        }
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            transition: all .2s linear;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        &::before {
+            background: url(../images/svg/slider-arrow-active.svg) no-repeat center / contain;
+        }
+
+        &::after {
+            background: url(../images/svg/slider-arrow.svg) no-repeat center / contain;
+            opacity: 0;
+        }
+
+        &-prev {
+            &::before, &::after {
+                transform: translate(50%, 50%);
+                rotate: 180deg;
+            }
+        }
+    }
+
+    &-progressbar {
+        width: 130rem !important;
+        height: 0.3rem !important;
+        background-color: #E7EDEF;
+        border-radius: 10rem;
+        transform: translateX(-50%);
+        top: auto !important;
+        left: 50% !important;
+        bottom: 0;
+
+        span {
+            background-color: rgba($color-active, 0.5) !important;
+            border-radius: 10rem;
+        }
+    }
+}

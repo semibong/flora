@@ -1,0 +1,139 @@
+.catalog {
+    margin-bottom: 13.5rem;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.4rem;
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 32.8rem;
+        width: calc(25% - 1.8rem);
+        background-color: rgba(#fff, 0.1);
+        backdrop-filter: blur(10px);
+        box-sizing: border-box;
+        padding: 2.4rem 3rem 5rem;
+        border: #fff 0.2rem solid;
+        border-radius: 0 5rem 5rem 5rem;
+        transition: all .2s linear;
+
+        &:hover {
+            background-color: rbga(#fff, 0.3);
+            box-shadow: 0 0 6rem 0 rgba(#000, 0.05);
+        }
+
+        &>a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            z-index: 2;
+            top: 0;
+            left: 0;
+        }
+
+        &-top {
+            min-height: 6.4rem;
+            margin-bottom: 4rem;
+        }
+
+        &-name {
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 100%;
+            color: #455A64;
+            margin: 0;
+
+            span {
+                font-size: 3rem;
+                color: $color-active;
+            }
+        }
+
+        &-deadline {
+            font-family: $font-third;
+            font-size: 1.8rem;
+            line-height: 2rem;
+            color: #455A64;
+        }
+
+        &-address {
+            font-family: $font-third;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            color: #89A1AA;
+        }
+
+        &-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 17.5rem;
+            margin-bottom: 6rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            min-height: 7.35rem;
+        }
+
+        &-price {
+            font-family: $font-third;
+            font-weight: 500;
+            font-size: 3rem;
+            line-height: 100%;
+            color: #455A64;
+
+            span {
+                font-size: 2rem;
+            }
+
+            &-old {
+                position: relative;
+                font-family: $font-third;
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 2rem;
+                color: #89A1AA;
+                width: max-content;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: calc(100% + 0.2rem);
+                    height: 1px;
+                    background-color: #89A1AA;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+                }
+            }
+
+            &-month {
+                font-family: $font-third;
+                font-weight: 500;
+                font-size: 1.8rem;
+                line-height: 2rem;
+                color: #455A64;
+
+                span {
+                    color: $color-active;
+                }
+            }
+        }
+    }
+}

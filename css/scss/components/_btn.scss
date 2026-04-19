@@ -1,0 +1,70 @@
+.btn {
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: $color-active;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: auto;
+    height: 6rem;
+    background: #4C4C70 linear-gradient(90deg, $color-primary, #4C4C70, $color-primary);
+    background-size: 200%;
+    box-sizing: border-box;
+    padding: 0.5rem 6rem 0;
+    border: rgba(#fff, 0.9) 0.2rem solid;
+    border-radius: 10rem;
+    outline: none;
+    cursor: pointer;
+    transition: background-position .4s ease-in-out, color .4s ease-in-out;
+
+    &:hover {
+        color: $color-active-secondary;
+        background-position: right;
+    }
+
+    &:active {
+        background: #4C4C70;
+        background-position: right;
+    }
+
+    span {
+        color: #fff;
+    }
+
+    &-border {
+        background: transparent;
+        transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+        &:hover {
+            background: rgba(lightgreen, 0.3);
+            border-color: $color-active;
+        }
+    }
+
+    &-more {
+        background: rgba(#fff, 0.5);
+        padding: 0.5rem 5rem 0 3rem;
+        border: #fff 1px solid;
+        transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+        &:hover {
+            background: rgba(lightgreen, 0.3);
+            border-color: $color-active;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1.5rem;
+            height: 1.2rem;
+            background: url(../images/svg/btn-more-arrow.svg) no-repeat center / contain;
+            pointer-events: none;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 1.8rem;
+        }
+    }
+}

@@ -1,0 +1,154 @@
+.hero {
+    position: relative;
+    height: 105rem;
+    box-sizing: border-box;
+    padding-top: 27.2rem;
+    margin-bottom: 13.5rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 35rem;
+        background: linear-gradient(180deg, rgba($color-primary, 0.6), transparent);
+        pointer-events: none;
+        top: 0;
+        left: 0;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__content {
+        h2 {
+            font-weight: 700;
+            font-size: 9rem;
+            line-height: 8rem;
+            color: #fff;
+            margin: 0 0 2.3rem;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        gap: 2.2rem;
+
+        .btn {
+            width: 21.4rem;
+            padding: 0.5rem 2rem 0;
+        }
+    }
+
+    &-percent {
+        position: relative;
+        margin-top: -1rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 26.7rem;
+            height: 45rem;
+            background: url(../images/svg/hero-percent.svg) no-repeat center / contain;
+            z-index: 1;
+            transform: translateX(100%);
+            top: -1.5rem;
+            right: -2.8rem;
+        }
+
+        p {
+            font-weight: 700;
+            font-size: 50rem;
+            line-height: 100%;
+            color: #fff;
+            text-shadow: 0 0.4rem 3rem rgba(#000, 0.25);
+        }
+    }
+
+    &-render {
+        position: absolute;
+        display: flex;
+        width: 153.8rem;
+        height: auto;
+        pointer-events: none;
+        right: 0;
+        bottom: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &-tree {
+        position: absolute;
+        width: 70.6rem;
+        height: 66.8rem;
+        pointer-events: none;
+        left: 0;
+        bottom: -34.5rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 47.8rem;
+            height: 35.1rem;
+            background: url(../images/tree-bg.png) no-repeat center / contain;
+            top: -4.8rem;
+            left: 0;
+        }
+
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            margin-left: -16.2rem;
+        }
+    }
+
+    &-clouds {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow-x: hidden;
+        top: 0;
+        left: 0;
+
+        img {
+            position: absolute;
+            width: 94.9rem;
+            height: 41.7rem;
+            object-fit: contain;
+            object-position: center;
+
+            &:first-of-type {
+                top: -14.5rem;
+                left: -23.6rem;
+            }
+
+            &:last-of-type {
+                top: 0;
+                right: -35.2rem;
+            }
+        }
+    }
+
+    &-bg {
+        position: absolute;
+        width: 100%;
+        height: 102.3rem;
+        object-fit: cover;
+        object-position: center;
+        pointer-events: none;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+}

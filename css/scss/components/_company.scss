@@ -1,0 +1,99 @@
+.company {
+    margin-bottom: 20rem;
+
+    &-logo {
+        display: flex;
+        width: 64.5rem;
+        height: auto;
+        margin-bottom: 2.5rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 2.4rem;
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &-text {
+        font-family: $font-second;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: #455A64;
+        margin-bottom: 2rem;
+
+        b {
+            font-weight: 600;
+        }
+    }
+
+    &__utp {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.4rem;
+
+        &__item {
+            display: flex;
+            gap: 2.5rem;
+            width: calc(50% - 1.2rem);
+            height: 15.3rem;
+            box-sizing: border-box;
+            padding: 2.4rem 0 0 3rem;
+            border: #fff 0.2rem solid;
+            border-radius: 6rem;
+
+            &-image {
+                display: flex;
+                width: 5rem;
+                height: 5rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+
+            p {
+                font-weight: 700;
+                font-size: 3rem;
+                line-height: 100%;
+                color: $color-primary;
+                padding-top: 1.7rem;
+            }
+
+            span {
+                font-family: $font-second;
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+                color: #455A64;
+            }
+        }
+    }
+
+    &-image {
+        flex-shrink: 0;
+        display: flex;
+        width: 68rem;
+        height: 100%;
+        border-radius: 6rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: inherit;
+        }
+    }
+}

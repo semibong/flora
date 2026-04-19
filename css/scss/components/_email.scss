@@ -1,0 +1,44 @@
+.email {
+    font-family: $font-second;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $color-primary;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2.4rem;
+    padding-left: 3rem;
+
+    &:hover {
+        color: $color-active;
+
+        &::before {
+            opacity: 0;
+        }
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 2.4rem;
+        height: 2.4rem;
+        transition: opacity .2s linear;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 0;
+    }
+
+    &::before {
+        background: url(../images/svg/email.svg) no-repeat center / contain;
+    }
+
+    &::after {
+        background: url(../images/svg/email-active.svg) no-repeat center / contain;
+        opacity: 0;
+    }
+}
