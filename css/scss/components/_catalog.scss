@@ -6,6 +6,24 @@
         position: relative;
         padding-bottom: 6rem;
 
+        .swiper {
+            overflow: visible;
+
+            &-slide {
+                transition: opacity .5s ease-in-out, scale .5s ease-in-out;
+                opacity: 0;
+                scale: 0.8;
+            }
+
+            &-slide-active,
+            &-slide-active + .swiper-slide,
+            &-slide-active + .swiper-slide + .swiper-slide,
+            &-slide-active + .swiper-slide + .swiper-slide + .swiper-slide {
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
         &-arrows {
             position: absolute;
             display: flex;
