@@ -21,11 +21,11 @@
             </a>
             <nav class="menu">
                 <ul>
-                    <li><a href="javascript:void(0)" class="active">выбрать квартиру</a></li>
-                    <li><a href="javascript:void(0)">Акции</a></li>
-                    <li><a href="javascript:void(0)">Новости</a></li>
-                    <li><a href="javascript:void(0)">Ход строительства</a></li>
-                    <li><a href="javascript:void(0)">Контакты</a></li>
+                    <li><a href="#catalog" class="active">выбрать квартиру</a></li>
+                    <li><a href="#promo">Акции</a></li>
+                    <li><a href="#gallery">Ход строительства</a></li>
+                    <li><a href="#company">О компании</a></li>
+                    <li><a href="#footer">Контакты</a></li>
                 </ul>
             </nav>
             <div class="phone">
@@ -34,19 +34,95 @@
                 </div>
                 <div class="phone__content">
                     <a href="tel:+79026009889" class="phone-call">+7 902 600 9889</a>
-                    <a href="javascript:void(0)" class="order-btn phone-order">заказать звонок</a>
+                    <a href="javascript:void(0)" class="phone-order order-btn">заказать звонок</a>
                 </div>
             </div>
         </div>
     </header>
+    <header class="header-mini header-mini-invisible">
+        <div class="container header-mini__content">
+            <a href="index.html" class="header-mini__logo">
+                <img src="images/svg/logo.svg" alt="">
+            </a>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#catalog" class="active">выбрать квартиру</a></li>
+                    <li><a href="#promo">Акции</a></li>
+                    <li><a href="#gallery">Ход строительства</a></li>
+                    <li><a href="#company">О компании</a></li>
+                    <li><a href="#footer">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="phone">
+                <div class="phone__image">
+                    <img src="images/svg/phone-icon.svg" alt="">
+                </div>
+                <div class="phone__content">
+                    <a href="tel:+79026009889" class="phone-call">+7 902 600 9889</a>
+                    <a href="javascript:void(0)" class="phone-order order-btn">заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="modal burger">
+        <div class="modal__wrapper">
+            <button class="modal-close burger-close"></button>
+            <div class="modal__content">
+                <a href="index.html" class="modal__logo">
+                    <img src="images/svg/logo.svg" alt="">
+                </a>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#catalog" class="active">выбрать квартиру</a></li>
+                        <li><a href="#promo">Акции</a></li>
+                        <li><a href="#gallery">Ход строительства</a></li>
+                        <li><a href="#company">О компании</a></li>
+                        <li><a href="#footer">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="modal__socials">
+                    <div class="phone">
+                        <div class="phone__image">
+                            <img src="images/svg/phone-icon.svg" alt="">
+                        </div>
+                        <div class="phone__content">
+                            <a href="tel:+79026009889" class="phone-call">+7 902 600 9889</a>
+                            <a href="javascript:void(0)" class="phone-order order-btn">заказать звонок</a>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a href="javascript:void(0)" class="socials__item">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6084 13.9194C15.9153 14.0674 16.6313 13.9903 16.8885 14.8928C17.1202 15.7057 17.1107 17.6497 16.9316 18.5546C16.4364 21.0569 14.3462 17.0992 13.8301 16.2298C13.563 15.7796 13.0982 14.7528 12.8916 14.2518C12.5353 13.3873 11.6811 13.5715 10.6629 13.5715C10.2799 13.5715 10.0214 13.6071 9.66 13.6064C9.09455 13.605 8 13.4949 8 14.0237C8 14.4282 8.22787 14.8324 8.40342 15.1832L9.34927 17.0842C9.51453 17.4037 9.66614 17.7239 9.85289 18.0386L10.3668 18.9479C11.7202 21.1958 13.3463 23.8325 15.7814 25.0504C17.627 25.9735 18.4957 25.9548 20.5194 25.9548C20.8344 25.9548 21.2302 25.7823 21.3396 25.5623C21.4731 25.2941 21.4594 24.8502 21.4886 24.4946C21.5599 23.6285 21.9782 22.4853 22.9894 23.192C23.4685 23.5269 24.0507 24.3069 24.4879 24.746C24.7248 24.9839 25.0114 25.2953 25.2775 25.4824C25.4138 25.5782 25.6393 25.7165 25.7802 25.7769C26.6163 26.1349 27.5766 25.9545 28.6121 25.9548C29.1868 25.955 30.1885 26.0504 30.6729 25.7318C31.4409 25.2266 30.6729 24.3239 30.2376 23.7634C29.9888 23.4433 29.0293 22.4209 28.6896 22.12C26.4657 20.1503 26.9107 20.4696 29.2148 17.3779C29.6982 16.7292 30.9984 15.0295 30.9984 14.128C30.9984 13.6554 30.5004 13.615 30.1277 13.5752C29.936 13.5548 29.8828 13.6051 29.6856 13.6076C29.073 13.6153 26.2835 13.5401 25.9346 13.6611C25.7092 13.7394 25.581 13.9726 25.4894 14.1874C24.9711 15.4015 24.6177 16.2375 23.8744 17.3634C23.5735 17.8192 22.6097 19.3457 22.0064 19.3457C21.5743 19.3457 21.4186 18.4801 21.4186 18.0587C21.4186 16.7808 21.4878 15.6149 21.4878 14.3716C21.4878 14.1069 21.4309 13.8294 21.3443 13.6462C20.9664 12.8458 18.9082 13.0149 17.9602 13.0149C17.2755 13.0149 16.1716 13.0862 15.7453 13.6395C15.679 13.7258 15.6207 13.772 15.6084 13.9194Z" fill="#C1C1CD"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="socials__item">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.9361 14.5471L24.9061 28.987C24.6801 30.0039 24.1001 30.233 23.2621 29.7739L18.7171 26.3616L16.4921 28.5268C16.2671 28.7569 16.0411 28.987 15.5251 28.987L15.8801 24.228L24.3581 16.3855C24.7121 16.0241 24.2611 15.8928 23.8101 16.1891L13.2691 22.9484L8.72316 21.5375C7.72416 21.2097 7.72416 20.5195 8.94915 20.0614L26.6141 13.071C27.4841 12.8084 28.2261 13.2685 27.9361 14.5471Z" fill="#C1C1CD"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="socials__item">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2865 14.4416C17.9316 14.3176 16.0939 15.958 15.6887 18.5254C15.3531 20.6515 15.9481 23.2421 16.457 23.3725C16.6729 23.4278 17.1923 23.029 17.5702 22.6713C17.6413 22.604 17.7487 22.5927 17.832 22.6438C18.4211 23.0055 19.0881 23.2772 19.8235 23.3159C22.241 23.4432 24.3834 21.5438 24.5101 19.1168C24.6367 16.6897 22.704 14.5689 20.2865 14.4416ZM16.3431 26.7672C16.2519 26.7024 16.1263 26.72 16.0498 26.8018C15.0285 27.8953 12.4147 28.6623 12.295 27.1699C12.295 26.0005 12.0333 25.0151 11.7453 23.9302C11.3925 22.6014 11 21.1234 11 18.9752C11 13.8525 15.1851 10 20.1473 10C25.1094 10 29 14.0406 29 19.0249C29 24.0092 24.9856 27.9503 20.1942 27.9503C18.4944 27.9503 17.6695 27.71 16.3431 26.7672Z" fill="#C1C1CD"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-decor">
+                <img src="images/tree.png" alt="">
+            </div>
+        </div>
+        <div class="modal-space"></div>
+    </div>
     <main>
         <section class="hero">
             <div class="container hero__wrapper">
                 <div class="hero__content">
                     <h2>Выгода <br>стартовых цен до</h2>
                     <div class="hero-buttons">
-                        <a href="javascript:void(0)" class="btn">Узнать цену</a>
-                        <a href="javascript:void(0)" class="order-btn btn">Заказать звонок</a>
+                        <a href="javascript:void(0)" class="btn order-btn">Узнать цену</a>
+                        <a href="javascript:void(0)" class="btn order-btn">Заказать звонок</a>
                     </div>
                 </div>
                 <div class="hero-percent">
@@ -190,93 +266,94 @@
             </div>
         </section>
         <section class="gallery">
+            <div class="anchor" id="gallery"></div>
             <div class="container">
                 <div class="gallery__slider">
                     <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide gallery__item">
                                 <div class="gallery__item-image">
-                                    <a href="images/gallery-img-1.jpg" data-fancybox="gallery">
+                                    <a href="images/gallery-img-1.jpg" data-fancybox="gallery-photos">
                                         <img src="images/gallery-img-1.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="gallery__item-block">
                                     <div class="gallery__item-image">
-                                        <a href="images/gallery-img-2.jpg" data-fancybox="gallery">
+                                        <a href="images/gallery-img-2.jpg" data-fancybox="gallery-photos">
                                             <img src="images/gallery-img-2.jpg" alt="">
                                         </a>
                                     </div>
                                     <div class="gallery__item-block">
                                         <div class="gallery__item-image">
-                                            <a href="images/gallery-img-3.jpg" data-fancybox="gallery">
+                                            <a href="images/gallery-img-3.jpg" data-fancybox="gallery-photos">
                                                 <img src="images/gallery-img-3.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="gallery__item-block">
                                             <div class="gallery__item-image">
-                                                <a href="images/gallery-img-4.jpg" data-fancybox="gallery">
+                                                <a href="images/gallery-img-4.jpg" data-fancybox="gallery-photos">
                                                     <img src="images/gallery-img-4.jpg" alt="">
                                                 </a>
                                             </div>
-                                            <a href="javascript:void(0)" class="btn btn-border">еще фото</a>
+                                            <a href="javascript:void(0)" data-fancybox data-src="#gallery-popup" class="btn btn-border">еще фото</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide gallery__item">
                                 <div class="gallery__item-image">
-                                    <a href="images/gallery-img-1.jpg" data-fancybox="gallery">
+                                    <a href="images/gallery-img-1.jpg" data-fancybox="gallery-photos">
                                         <img src="images/gallery-img-1.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="gallery__item-block">
                                     <div class="gallery__item-image">
-                                        <a href="images/gallery-img-2.jpg" data-fancybox="gallery">
+                                        <a href="images/gallery-img-2.jpg" data-fancybox="gallery-photos">
                                             <img src="images/gallery-img-2.jpg" alt="">
                                         </a>
                                     </div>
                                     <div class="gallery__item-block">
                                         <div class="gallery__item-image">
-                                            <a href="images/gallery-img-3.jpg" data-fancybox="gallery">
+                                            <a href="images/gallery-img-3.jpg" data-fancybox="gallery-photos">
                                                 <img src="images/gallery-img-3.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="gallery__item-block">
                                             <div class="gallery__item-image">
-                                                <a href="images/gallery-img-4.jpg" data-fancybox="gallery">
+                                                <a href="images/gallery-img-4.jpg" data-fancybox="gallery-photos">
                                                     <img src="images/gallery-img-4.jpg" alt="">
                                                 </a>
                                             </div>
-                                            <a href="javascript:void(0)" class="btn btn-border">еще фото</a>
+                                            <a href="javascript:void(0)" data-fancybox data-src="#gallery-popup" class="btn btn-border">еще фото</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide gallery__item">
                                 <div class="gallery__item-image">
-                                    <a href="images/gallery-img-1.jpg" data-fancybox="gallery">
+                                    <a href="images/gallery-img-1.jpg" data-fancybox="gallery-photos">
                                         <img src="images/gallery-img-1.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="gallery__item-block">
                                     <div class="gallery__item-image">
-                                        <a href="images/gallery-img-2.jpg" data-fancybox="gallery">
+                                        <a href="images/gallery-img-2.jpg" data-fancybox="gallery-photos">
                                             <img src="images/gallery-img-2.jpg" alt="">
                                         </a>
                                     </div>
                                     <div class="gallery__item-block">
                                         <div class="gallery__item-image">
-                                            <a href="images/gallery-img-3.jpg" data-fancybox="gallery">
+                                            <a href="images/gallery-img-3.jpg" data-fancybox="gallery-photos">
                                                 <img src="images/gallery-img-3.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="gallery__item-block">
                                             <div class="gallery__item-image">
-                                                <a href="images/gallery-img-4.jpg" data-fancybox="gallery">
+                                                <a href="images/gallery-img-4.jpg" data-fancybox="gallery-photos">
                                                     <img src="images/gallery-img-4.jpg" alt="">
                                                 </a>
                                             </div>
-                                            <a href="javascript:void(0)" class="btn btn-border">еще фото</a>
+                                            <a href="javascript:void(0)" data-fancybox data-src="#gallery-popup" class="btn btn-border">еще фото</a>
                                         </div>
                                     </div>
                                 </div>
@@ -286,6 +363,95 @@
                     <div class="gallery__slider-arrows">
                         <div class="slider-arrow slider-arrow-prev"></div>
                         <div class="slider-arrow slider-arrow-next"></div>
+                    </div>
+                    <div class="slider-progressbar"></div>
+                </div>
+            </div>
+            <div class="gallery-popup" id="gallery-popup" style="display: none;">
+                <div class="gallery-popup__slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-1.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-2.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-3.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-4.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-1.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-2.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-3.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-4.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-1.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-2.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-3.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-4.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-1.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-2.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-3.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/gallery-img-4.jpg" class="gallery-popup__item" data-fancybox="gallery-photos-popup">
+                                    <img src="images/gallery-img-4.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="slider-progressbar"></div>
                 </div>
@@ -307,76 +473,163 @@
             </div>
         </section>
         <section class="catalog">
+            <div class="anchor" id="catalog"></div>
             <div class="container">
-                <div class="title-block">
-                    <h2 class="title">Планировки и цены</h2>
-                    <a href="javascript:void(0)" class="btn btn-more">все планировки</a>
-                </div>
-                <div class="catalog__content">
-                    <div class="catalog__card">
-                        <a href="javascript:void(0)"></a>
-                        <div class="catalog__card-top">
-                            <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
-                            <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
-                            <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
-                        </div>
-                        <div class="catalog__card-image">
-                            <img src="images/catalog-card-img.png" alt="">
-                        </div>
-                        <div class="catalog__card-bottom">
-                            <p class="catalog__card-price-old">от 12 110 500 руб.</p>
-                            <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
-                            <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
+                <h2 class="title">Планировки и цены</h2>
+                <div class="catalog__slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="catalog__card">
+                                    <a href="javascript:void(0)" data-fancybox data-src="#catalog-card-1"></a>
+                                    <div class="catalog__card-top">
+                                        <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
+                                        <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
+                                        <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
+                                    </div>
+                                    <div class="catalog__card-image">
+                                        <img src="images/catalog-card-img.png" alt="">
+                                    </div>
+                                    <div class="catalog__card-bottom">
+                                        <p class="catalog__card-price-old">от 12 110 500 руб.</p>
+                                        <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
+                                        <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-popup" id="catalog-card-1" style="display: none;">
+                                    <div class="catalog-popup-image">
+                                        <img src="images/catalog-popup-img.png" alt="">
+                                    </div>
+                                    <div class="catalog-popup__content">
+                                        <div class="catalog__card-top">
+                                            <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
+                                            <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
+                                            <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
+                                        </div>
+                                        <div class="catalog__card-bottom">
+                                            <p class="catalog__card-price-old">от 12 110 500 руб.</p>
+                                            <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
+                                            <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
+                                        </div>
+                                        <a href="javascript:void(0)" class="btn order-btn">Заказать звонок</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="catalog__card">
+                                    <a href="javascript:void(0)" data-fancybox data-src="#catalog-card-2"></a>
+                                    <div class="catalog__card-top">
+                                        <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
+                                        <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
+                                        <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
+                                    </div>
+                                    <div class="catalog__card-image">
+                                        <img src="images/catalog-card-img.png" alt="">
+                                    </div>
+                                    <div class="catalog__card-bottom">
+                                        <p class="catalog__card-price-old">от 12 110 500 руб.</p>
+                                        <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
+                                        <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-popup" id="catalog-card-2" style="display: none;">
+                                    <div class="catalog-popup-image">
+                                        <img src="images/catalog-popup-img.png" alt="">
+                                    </div>
+                                    <div class="catalog-popup__content">
+                                        <div class="catalog__card-top">
+                                            <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
+                                            <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
+                                            <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
+                                        </div>
+                                        <div class="catalog__card-bottom">
+                                            <p class="catalog__card-price-old">от 12 110 500 руб.</p>
+                                            <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
+                                            <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
+                                        </div>
+                                        <a href="javascript:void(0)" class="btn order-btn">Заказать звонок</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="catalog__card">
+                                    <a href="javascript:void(0)" data-fancybox data-src="#catalog-card-3"></a>
+                                    <div class="catalog__card-top">
+                                        <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
+                                        <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
+                                        <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
+                                    </div>
+                                    <div class="catalog__card-image">
+                                        <img src="images/catalog-card-img.png" alt="">
+                                    </div>
+                                    <div class="catalog__card-bottom">
+                                        <p class="catalog__card-price-old">от 12 110 500 руб.</p>
+                                        <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
+                                        <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-popup" id="catalog-card-3" style="display: none;">
+                                    <div class="catalog-popup-image">
+                                        <img src="images/catalog-popup-img.png" alt="">
+                                    </div>
+                                    <div class="catalog-popup__content">
+                                        <div class="catalog__card-top">
+                                            <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
+                                            <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
+                                            <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
+                                        </div>
+                                        <div class="catalog__card-bottom">
+                                            <p class="catalog__card-price-old">от 12 110 500 руб.</p>
+                                            <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
+                                            <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
+                                        </div>
+                                        <a href="javascript:void(0)" class="btn order-btn">Заказать звонок</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="catalog__card">
+                                    <a href="javascript:void(0)" data-fancybox data-src="#catalog-card-4"></a>
+                                    <div class="catalog__card-top">
+                                        <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
+                                        <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
+                                        <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
+                                    </div>
+                                    <div class="catalog__card-image">
+                                        <img src="images/catalog-card-img.png" alt="">
+                                    </div>
+                                    <div class="catalog__card-bottom">
+                                        <p class="catalog__card-price-old">от 12 110 500 руб.</p>
+                                        <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
+                                        <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
+                                    </div>
+                                </div>
+                                <div class="catalog-popup" id="catalog-card-4" style="display: none;">
+                                    <div class="catalog-popup-image">
+                                        <img src="images/catalog-popup-img.png" alt="">
+                                    </div>
+                                    <div class="catalog-popup__content">
+                                        <div class="catalog__card-top">
+                                            <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
+                                            <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
+                                            <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
+                                        </div>
+                                        <div class="catalog__card-bottom">
+                                            <p class="catalog__card-price-old">от 12 110 500 руб.</p>
+                                            <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
+                                            <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
+                                        </div>
+                                        <a href="javascript:void(0)" class="btn order-btn">Заказать звонок</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="catalog__card">
-                        <a href="javascript:void(0)"></a>
-                        <div class="catalog__card-top">
-                            <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
-                            <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
-                            <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
-                        </div>
-                        <div class="catalog__card-image">
-                            <img src="images/catalog-card-img.png" alt="">
-                        </div>
-                        <div class="catalog__card-bottom">
-                            <p class="catalog__card-price-old">от 12 110 500 руб.</p>
-                            <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
-                            <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
-                        </div>
+                    <div class="catalog__slider-arrows">
+                        <div class="slider-arrow slider-arrow-prev"></div>
+                        <div class="slider-arrow slider-arrow-next"></div>
                     </div>
-                    <div class="catalog__card">
-                        <a href="javascript:void(0)"></a>
-                        <div class="catalog__card-top">
-                            <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
-                            <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
-                            <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
-                        </div>
-                        <div class="catalog__card-image">
-                            <img src="images/catalog-card-img.png" alt="">
-                        </div>
-                        <div class="catalog__card-bottom">
-                            <p class="catalog__card-price-old">от 12 110 500 руб.</p>
-                            <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
-                            <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
-                        </div>
-                    </div>
-                    <div class="catalog__card">
-                        <a href="javascript:void(0)"></a>
-                        <div class="catalog__card-top">
-                            <h3 class="catalog__card-name">Студия <span>22,4 м²</span></h3>
-                            <p class="catalog__card-deadline">Срок сдачи 4 квартал 2027</p>
-                            <p class="catalog__card-address">Дом13  Секция 4, 16 этаж из 17</p>
-                        </div>
-                        <div class="catalog__card-image">
-                            <img src="images/catalog-card-img.png" alt="">
-                        </div>
-                        <div class="catalog__card-bottom">
-                            <p class="catalog__card-price-old">от 12 110 500 руб.</p>
-                            <p class="catalog__card-price"><span>от</span>12 110 500 руб.</p>
-                            <p class="catalog__card-price-month">от <span>35600</span> руб./мес.</p>
-                        </div>
-                    </div>
+                    <div class="slider-progressbar"></div>
                 </div>
             </div>
         </section>
@@ -426,6 +679,7 @@
             </div>
         </section>
         <section class="company">
+            <div class="anchor" id="company"></div>
             <div class="container">
                 <h2 class="title">О компании «Весна»</h2>
                 <div class="company-logo">
@@ -487,6 +741,7 @@
             </div>
         </section>
         <section class="promo">
+            <div class="anchor" id="promo"></div>
             <div class="promo__wrapper">
                 <div class="promo__content">
                     <h2 class="promo-title">Уже <span>совсем скоро</span> - повышение цен!!</h2>
@@ -536,7 +791,7 @@
                         </div>
                     </div>
                     <p class="promo-text">сейчас <span>Лучшая предстартовая цена,</span> выбор этажей, <br>фиксация условий . . .</p>
-                    <a href="javascript:void(0)" class="btn">успей <span>оставить заявку</span></a>
+                    <a href="javascript:void(0)" class="btn order-btn">успей <span>оставить заявку</span></a>
                     <div class="promo__content-decor"><span></span><span></span><span></span></div>
                 </div>
                 <div class="promo-bg">
@@ -642,7 +897,7 @@
                         <p class="tour-title">Обрети гармонию <span>загородной жизни в черте города</span></p>
                         <p class="tour-text">Переменная этажность домов делает комплекс привлекательным для людей, которые стремятся к спокойствию загородной жизни и единению с природой. Просторный закрытый двор-парк с зелеными насаждениями и пешеходными дорожками создает уютную атмосферу и располагает к общению между жителями. <br>Благодаря приватному двору без автомобилей, дети и взрослые чувствуют себя безопасно и свободно. <br>Все квартиры сдаются в современной чистовой отделке, в светлых тонах. <br>Тишина и спокойствие царят в доме с первого дня.</p>
                     </div>
-                    <a href="javascript:void(0)" class="tour-link">
+                    <a href="javascript:void(0)" data-fancybox data-src="#tour-popup" class="tour-link">
                         <div class="tour-link-icon">
                             <img src="images/svg/tour-link-icon.svg" alt="">
                         </div>
@@ -650,11 +905,14 @@
                     </a>
                 </div>
             </div>
+            <div class="tour-popup" id="tour-popup" style="display: none;">
+                <iframe src="https://vkvideo.ru/video_ext.php?oid=-35460441&id=456239182&hash=113f145dcfcccb4f&hd=3" width="1280" height="720" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+            </div>
         </section>
         <section class="callback">
             <div class="callback__wrapper">
                 <div class="callback__content">
-                    <div class="form">
+                    <form class="form">
                         <h2><span>заказать</span> обратный звонок</h2>
                         <input type="text" name="name" id="name" placeholder="Ваше имя">
                         <input type="tel" name="phone" id="phone" placeholder="Ваш телефон">
@@ -663,7 +921,7 @@
                             <input type="checkbox" id="callback-checkbox">
                             <label for="callback-checkbox">Я согласен(на) на обработку персональных данных в соответствии с <a href="javascript:void(0)">Политикой обработки персональных данных</a>.</label>
                         </div>
-                    </div>
+                    </form>
                     <div class="callback__content-decor"><span></span><span></span><span></span></div>
                 </div>
                 <div class="container callback-bg">
@@ -691,6 +949,7 @@
         </section>
     </main>
     <footer class="footer">
+        <div class="anchor" id="footer"></div>
         <div class="container footer__content">
             <div class="footer-top">
                 <a href="index.html" class="footer__logo">
@@ -698,11 +957,11 @@
                 </a>
                 <nav class="menu">
                     <ul>
-                        <li><a href="javascript:void(0)" class="active">выбрать квартиру</a></li>
-                        <li><a href="javascript:void(0)">Акции</a></li>
-                        <li><a href="javascript:void(0)">Новости</a></li>
-                        <li><a href="javascript:void(0)">Ход строительства</a></li>
-                        <li><a href="javascript:void(0)">Контакты</a></li>
+                        <li><a href="#catalog" class="active">выбрать квартиру</a></li>
+                        <li><a href="#promo">Акции</a></li>
+                        <li><a href="#gallery">Ход строительства</a></li>
+                        <li><a href="#company">О компании</a></li>
+                        <li><a href="#footer">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="phone">
@@ -711,7 +970,7 @@
                     </div>
                     <div class="phone__content">
                         <a href="tel:+79026009889" class="phone-call">+7 902 600 9889</a>
-                        <a href="javascript:void(0)" class="order-btn phone-order">заказать звонок</a>
+                        <a href="javascript:void(0)" class="phone-order order-btn">заказать звонок</a>
                     </div>
                 </div>
             </div>
@@ -769,7 +1028,7 @@
         </div>
     </div>
     <div class="float float-invisible">
-        <div class="order-btn float__item">
+        <div class="float__item order-btn">
             <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.835 7.16667C8.9 8.13083 9.0625 9.07333 9.3225 9.9725L8.0225 11.2725C7.57833 9.9725 7.29667 8.59667 7.19917 7.16667H8.835ZM19.5167 20.1883C20.4375 20.4483 21.38 20.6108 22.3333 20.6758V22.29C20.9033 22.1925 19.5275 21.9108 18.2167 21.4775L19.5167 20.1883ZM9.875 5H6.08333C5.4875 5 5 5.4875 5 6.08333C5 16.2558 13.2442 24.5 23.4167 24.5C24.0125 24.5 24.5 24.0125 24.5 23.4167V19.6358C24.5 19.04 24.0125 18.5525 23.4167 18.5525C22.0733 18.5525 20.7625 18.3358 19.5492 17.935C19.4419 17.8949 19.3278 17.8765 19.2133 17.8808C18.9317 17.8808 18.6608 17.9892 18.4442 18.195L16.0608 20.5783C12.9901 19.0079 10.4921 16.5099 8.92167 13.4392L11.305 11.0558C11.6083 10.7525 11.695 10.33 11.5758 9.95083C11.1656 8.70272 10.9571 7.39714 10.9583 6.08333C10.9583 5.4875 10.4708 5 9.875 5Z" fill="#7BAE4D"/>
             </svg>
@@ -781,6 +1040,58 @@
         </div>
     </div>
     <div class="float-pattern float-invisible"><img src="images/svg/pattern.svg" alt=""></div>
+    <div class="modal order">
+        <div class="modal__wrapper">
+            <button class="modal-close"></button>
+            <div class="modal__content">
+                <a href="index.html" class="modal__logo">
+                    <img src="images/svg/logo.svg" alt="">
+                </a>
+                <form class="form">
+                    <h2>заказать <br>обратный звонок</h2>
+                    <input type="text" name="name" id="name" placeholder="Ваше имя">
+                    <input type="tel" name="phone" id="phone" placeholder="Ваш телефон">
+                    <button class="btn">заказать звонок</button>
+                    <div class="checkbox">
+                        <input type="checkbox" id="order-checkbox">
+                        <label for="order-checkbox">Я согласен(на) на обработку персональных данных в соответствии с <a href="javascript:void(0)">Политикой обработки персональных данных</a>.</label>
+                    </div>
+                </form>
+                <div class="modal__socials">
+                    <div class="phone">
+                        <div class="phone__image">
+                            <img src="images/svg/phone-icon.svg" alt="">
+                        </div>
+                        <div class="phone__content">
+                            <a href="tel:+79026009889" class="phone-call">+7 902 600 9889</a>
+                            <a href="javascript:void(0)" class="phone-order order-btn">заказать звонок</a>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a href="javascript:void(0)" class="socials__item">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6084 13.9194C15.9153 14.0674 16.6313 13.9903 16.8885 14.8928C17.1202 15.7057 17.1107 17.6497 16.9316 18.5546C16.4364 21.0569 14.3462 17.0992 13.8301 16.2298C13.563 15.7796 13.0982 14.7528 12.8916 14.2518C12.5353 13.3873 11.6811 13.5715 10.6629 13.5715C10.2799 13.5715 10.0214 13.6071 9.66 13.6064C9.09455 13.605 8 13.4949 8 14.0237C8 14.4282 8.22787 14.8324 8.40342 15.1832L9.34927 17.0842C9.51453 17.4037 9.66614 17.7239 9.85289 18.0386L10.3668 18.9479C11.7202 21.1958 13.3463 23.8325 15.7814 25.0504C17.627 25.9735 18.4957 25.9548 20.5194 25.9548C20.8344 25.9548 21.2302 25.7823 21.3396 25.5623C21.4731 25.2941 21.4594 24.8502 21.4886 24.4946C21.5599 23.6285 21.9782 22.4853 22.9894 23.192C23.4685 23.5269 24.0507 24.3069 24.4879 24.746C24.7248 24.9839 25.0114 25.2953 25.2775 25.4824C25.4138 25.5782 25.6393 25.7165 25.7802 25.7769C26.6163 26.1349 27.5766 25.9545 28.6121 25.9548C29.1868 25.955 30.1885 26.0504 30.6729 25.7318C31.4409 25.2266 30.6729 24.3239 30.2376 23.7634C29.9888 23.4433 29.0293 22.4209 28.6896 22.12C26.4657 20.1503 26.9107 20.4696 29.2148 17.3779C29.6982 16.7292 30.9984 15.0295 30.9984 14.128C30.9984 13.6554 30.5004 13.615 30.1277 13.5752C29.936 13.5548 29.8828 13.6051 29.6856 13.6076C29.073 13.6153 26.2835 13.5401 25.9346 13.6611C25.7092 13.7394 25.581 13.9726 25.4894 14.1874C24.9711 15.4015 24.6177 16.2375 23.8744 17.3634C23.5735 17.8192 22.6097 19.3457 22.0064 19.3457C21.5743 19.3457 21.4186 18.4801 21.4186 18.0587C21.4186 16.7808 21.4878 15.6149 21.4878 14.3716C21.4878 14.1069 21.4309 13.8294 21.3443 13.6462C20.9664 12.8458 18.9082 13.0149 17.9602 13.0149C17.2755 13.0149 16.1716 13.0862 15.7453 13.6395C15.679 13.7258 15.6207 13.772 15.6084 13.9194Z" fill="#C1C1CD"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="socials__item">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.9361 14.5471L24.9061 28.987C24.6801 30.0039 24.1001 30.233 23.2621 29.7739L18.7171 26.3616L16.4921 28.5268C16.2671 28.7569 16.0411 28.987 15.5251 28.987L15.8801 24.228L24.3581 16.3855C24.7121 16.0241 24.2611 15.8928 23.8101 16.1891L13.2691 22.9484L8.72316 21.5375C7.72416 21.2097 7.72416 20.5195 8.94915 20.0614L26.6141 13.071C27.4841 12.8084 28.2261 13.2685 27.9361 14.5471Z" fill="#C1C1CD"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="socials__item">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2865 14.4416C17.9316 14.3176 16.0939 15.958 15.6887 18.5254C15.3531 20.6515 15.9481 23.2421 16.457 23.3725C16.6729 23.4278 17.1923 23.029 17.5702 22.6713C17.6413 22.604 17.7487 22.5927 17.832 22.6438C18.4211 23.0055 19.0881 23.2772 19.8235 23.3159C22.241 23.4432 24.3834 21.5438 24.5101 19.1168C24.6367 16.6897 22.704 14.5689 20.2865 14.4416ZM16.3431 26.7672C16.2519 26.7024 16.1263 26.72 16.0498 26.8018C15.0285 27.8953 12.4147 28.6623 12.295 27.1699C12.295 26.0005 12.0333 25.0151 11.7453 23.9302C11.3925 22.6014 11 21.1234 11 18.9752C11 13.8525 15.1851 10 20.1473 10C25.1094 10 29 14.0406 29 19.0249C29 24.0092 24.9856 27.9503 20.1942 27.9503C18.4944 27.9503 17.6695 27.71 16.3431 26.7672Z" fill="#C1C1CD"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-decor">
+                <img src="images/tree.png" alt="">
+            </div>
+        </div>
+        <div class="modal-space"></div>
+    </div>
     <script src="js/jquery/jquery-3.7.1.min.js"></script>
     <script src="js/jquery/jquery.form.min.js"></script>
     <script src="js/jquery/jquery.inputmask.min.js"></script>

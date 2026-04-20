@@ -1,0 +1,23 @@
+.burger {
+    .modal {
+        &__wrapper {
+            padding-right: 17.5rem;
+        }
+    }
+
+    .menu {
+        ul {
+            flex-direction: column;
+            align-items: start;
+            gap: 4rem;
+
+            li {
+                a {
+                    font-weight: 400;
+                    font-size: 4rem;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

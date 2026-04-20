@@ -38,7 +38,7 @@
         font-family: $font-second;
         font-size: 1.6rem;
         line-height: 2rem;
-        color: #455A64;
+        color: $color-text;
     }
 
     &-link {
@@ -90,6 +90,35 @@
             object-position: center;
             pointer-events: none;
             border-radius: inherit;
+        }
+    }
+
+    &-popup {
+        width: 149rem;
+        height: 85rem;
+        background-color: rgba(#fff, 0.95);
+        box-sizing: border-box;
+        padding: 6rem 10rem;
+        border: #fff 0.2rem solid;
+        border-radius: 5rem;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+        }
+
+        &.fancybox__content>.f-button.is-close-btn {
+            width: 6.3rem;
+            height: 6.3rem;
+            background: url(../images/svg/close-popup-icon.svg) no-repeat center / contain;
+            border-radius: 50%;
+            top: 1.8rem;
+            right: 1.8rem;
+
+            svg {
+                display: none;
+            }
         }
     }
 }

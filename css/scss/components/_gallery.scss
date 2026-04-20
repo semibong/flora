@@ -1,4 +1,5 @@
 .gallery {
+    position: relative;
     overflow: hidden;
     margin-bottom: 16.5rem;
 
@@ -99,6 +100,50 @@
                         height: 19.5rem;
                     }
                 }
+            }
+        }
+    }
+
+    &-popup {
+        width: calc(100% - 2.8rem);
+        background-color: rgba(#fff, 0.95);
+        box-sizing: border-box;
+        padding: 6rem 10rem 3rem;
+        border: #fff 0.2rem solid;
+        border-radius: 3em;
+
+        &__slider {
+            position: relative;
+            width: 100%;
+
+            padding-bottom: 3rem;
+        }
+
+        &__item {
+            display: flex;
+            width: 100%;
+            height: 30rem;
+            border-radius: 2rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: inherit;
+            }
+        }
+
+        &.fancybox__content>.f-button.is-close-btn {
+            width: 6.3rem;
+            height: 6.3rem;
+            background: url(../images/svg/close-popup-icon.svg) no-repeat center / contain;
+            border-radius: 50%;
+            top: 1.8rem;
+            right: 1.8rem;
+
+            svg {
+                display: none;
             }
         }
     }

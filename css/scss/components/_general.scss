@@ -11,9 +11,9 @@ $color-primary: #2C2C45;
 $color-secondary: #A8B2BE;
 $color-active: #77B73D;
 $color-active-secondary: #7BAE4D;
+$color-text: #455A64;
 
 html {
-    scroll-behavior: smooth;
     font-size: calc(100vw / 1920 * 10);
 
     @media #{$lg} {

@@ -2,8 +2,11 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    gap: 29rem;
-    padding-top: 4rem;
+    justify-content: space-between;
+    gap: 5rem;
+    height: 100dvh;
+    box-sizing: border-box;
+    padding: 10rem 0;
     transition: all .2s linear;
     pointer-events: none;
     z-index: 100;
@@ -95,7 +98,7 @@
         span {
             font-weight: 700;
             font-size: 1.8rem;
-            color: #455A64;
+            color: $color-text;
             padding-left: 0.3rem;
             transition: all .2s linear;
         }

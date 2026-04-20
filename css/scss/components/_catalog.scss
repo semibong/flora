@@ -1,10 +1,22 @@
 .catalog {
+    position: relative;
     margin-bottom: 13.5rem;
 
-    &__content {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2.4rem;
+    &__slider {
+        position: relative;
+        padding-bottom: 6rem;
+
+        &-arrows {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% + 19.2rem);
+            pointer-events: none;
+            z-index: 2;
+            transform: translate(-50%, -50%);
+            top: calc(50% - 3rem);
+            left: 50%;
+        }
     }
 
     &__card {
@@ -12,7 +24,7 @@
         display: flex;
         flex-direction: column;
         max-width: 32.8rem;
-        width: calc(25% - 1.8rem);
+        width: 100%;
         background-color: rgba(#fff, 0.1);
         backdrop-filter: blur(10px);
         box-sizing: border-box;
@@ -32,6 +44,7 @@
             height: 100%;
             border-radius: inherit;
             z-index: 2;
+            outline: none;
             top: 0;
             left: 0;
         }
@@ -45,7 +58,7 @@
             font-weight: 700;
             font-size: 2.2rem;
             line-height: 100%;
-            color: #455A64;
+            color: $color-text;
             margin: 0;
 
             span {
@@ -58,7 +71,7 @@
             font-family: $font-third;
             font-size: 1.8rem;
             line-height: 2rem;
-            color: #455A64;
+            color: $color-text;
         }
 
         &-address {
@@ -96,7 +109,7 @@
             font-weight: 500;
             font-size: 3rem;
             line-height: 100%;
-            color: #455A64;
+            color: $color-text;
 
             span {
                 font-size: 2rem;
@@ -128,11 +141,58 @@
                 font-weight: 500;
                 font-size: 1.8rem;
                 line-height: 2rem;
-                color: #455A64;
+                color: $color-text;
 
                 span {
                     color: $color-active;
                 }
+            }
+        }
+    }
+
+    &-popup {
+        display: flex;
+        flex-direction: row;
+        gap: 6.4rem;
+        background-color: rgba(#fff, 0.95);
+        box-sizing: border-box;
+        padding: 6.5rem 11rem 14.5rem 6.5rem;
+        border: #fff 0.2rem solid;
+        border-radius: 5rem;
+
+        &-image {
+            display: flex;
+            width: 52.8rem;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: top;
+            }
+        }
+
+        &__content {
+            .catalog__card-bottom {
+                margin-bottom: 3.5rem;
+            }
+
+            .btn {
+                padding: 0.5rem 3.5rem 0;
+            }
+        }
+
+        &.fancybox__content>.f-button.is-close-btn {
+            width: 6.3rem;
+            height: 6.3rem;
+            background: url(../images/svg/close-popup-icon.svg) no-repeat center / contain;
+            border-radius: 50%;
+            top: 1.8rem;
+            right: 1.8rem;
+
+            svg {
+                display: none;
             }
         }
     }

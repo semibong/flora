@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     padding: 3.5rem 0 2rem;
     background: url(../images/footer-bg.png) no-repeat center / cover;
 
@@ -67,7 +68,7 @@
             font-family: $font-second;
             font-size: 1.4rem;
             line-height: 1.6rem;
-            color: #455A64;
+            color: $color-text;
         }
     }
 
