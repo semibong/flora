@@ -9,6 +9,11 @@
     top: 0;
     left: 0;
 
+    @media #{$lg} {
+        height: calc(100dvh - 6rem);
+        top: 6rem;
+    }
+
     &-opened {
         pointer-events: all;
         opacity: 1;
@@ -18,13 +23,25 @@
         position: relative;
         width: max-content;
         height: 100%;
-        background: linear-gradient(90deg, #FAF7F0 27%, rgba(#FAF7F0, 0.8) 100%);
+        background: linear-gradient(90deg, $color-background 27%, rgba($color-background, 0.8) 100%);
         backdrop-filter: blur(10px);
         box-sizing: border-box;
         padding: 5.7rem 9rem 11rem 29.5rem;
         border: rgba(#fff, 0.5) 1rem solid;
         border-radius: 0 17.3rem 17.3rem 0;
         z-index: 1;
+
+        @media #{$lg} {
+            width: calc(100% - 2rem);
+            padding: 3.5rem 7rem 5.5rem 4.2rem;
+            border-left: none;
+            border-radius: 0 6rem 6rem 0;
+            overflow-y: auto;
+        }
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     &-close {
@@ -35,14 +52,30 @@
         padding: 0;
         border: none;
         cursor: pointer;
+        z-index: 1;
         top: 3rem;
         left: 4rem;
+
+        @media #{$lg} {
+            width: 3.7rem;
+            height: 3.7rem;
+            background: url(../images/svg/close-mob-icon.svg) no-repeat center / contain;
+            top: 1.6rem;
+            left: auto;
+            right: 2rem;
+        }
     }
 
     &__content {
+        position: relative;
         display: flex;
         flex-direction: column;
         height: 100%;
+        z-index: 1;
+
+        @media #{$lg} {
+            gap: 3.5rem;
+        }
     }
 
     &__logo {
@@ -50,6 +83,10 @@
         width: 25.5rem;
         height: 8rem;
         margin-bottom: 8.8rem;
+
+        @media #{$lg} {
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -64,6 +101,28 @@
         flex-direction: column;
         gap: 2.5rem;
         margin-top: auto;
+
+        @media #{$lg} {
+            gap: 7.5rem;
+        }
+
+        .socials {
+            @media #{$lg} {
+                margin-left: 11rem;
+            }
+
+            &__item {
+                @media #{$lg} {
+                    background-color: rgba(#fff, 0.5);
+                }
+
+                &:hover {
+                    @media #{$lg} {
+                        background-color: rgba($color-active, 0.8);
+                    }
+                }
+            }
+        }
     }
 
     &-decor {
@@ -75,6 +134,13 @@
         left: -18.5rem;
         bottom: 8rem;
 
+        @media #{$lg} {
+            width: 23.8rem;
+            height: 22.2rem;
+            left: -8.7rem;
+            bottom: 0;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -85,6 +151,12 @@
             transform: translate(-50%, -50%);
             top: calc(50% + 1rem);
             left: 50%;
+
+            @media #{$lg} {
+                width: 12rem;
+                height: 13.5rem;
+                top: 50%;
+            }
         }
 
         img {
@@ -101,5 +173,9 @@
         height: 100%;
         top: 0;
         left: 0;
+
+        @media #{$lg} {
+            backdrop-filter: blur(10px);
+        }
     }
 }

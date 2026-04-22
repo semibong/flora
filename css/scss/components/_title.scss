@@ -4,4 +4,8 @@
     line-height: 100%;
     color: $color-primary;
     margin: 0 0 3rem;
+
+    @media #{$lg} {
+        margin: 0 0 2rem;
+    }
 }

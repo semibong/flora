@@ -1,6 +1,14 @@
 .callback {
     margin-bottom: 20rem;
 
+    @media #{$lg} {
+        margin-bottom: 9rem;
+    }
+
+    @media #{$md} {
+        margin-bottom: 13rem;
+    }
+
     &__wrapper {
         position: relative;
         display: flex;
@@ -8,6 +16,12 @@
         height: 57rem;
         box-sizing: border-box;
         padding-top: 5.3rem;
+
+        @media #{$lg} {
+            flex-direction: column;
+            height: auto;
+            padding-top: 0;
+        }
 
         &::before {
             content: '';
@@ -18,6 +32,10 @@
             transform: translateY(-50%);
             top: 50%;
             left: 0;
+
+            @media #{$lg} {
+                content: none;
+            }
         }
     }
 
@@ -32,6 +50,15 @@
         border-radius: 0 0 0 15rem;
         z-index: 1;
 
+        @media #{$lg} {
+            min-width: 0;
+            width: 100%;
+            min-height: 0;
+            background: linear-gradient(90deg, #F3ECD8, #F6EFDF);
+            padding: 2.2rem 1.3rem 5.8rem;
+            border-radius: 0;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -43,6 +70,10 @@
             z-index: -1;
             top: 0;
             left: 0;
+
+            @media #{$lg} {
+                content: none;
+            }
         }
 
         &::after {
@@ -55,6 +86,10 @@
             transform: translateY(-50%);
             top: 50%;
             right: 9.2rem;
+
+            @media #{$lg} {
+                content: none;
+            }
         }
 
         &-decor {
@@ -63,6 +98,10 @@
             z-index: -2;
             right: 0;
             bottom: 0;
+
+            @media #{$lg} {
+                display: none;
+            }
 
             span {
                 position: absolute;
@@ -99,6 +138,10 @@
             line-height: 4.5rem;
             color: $color-primary;
 
+            @media #{$lg} {
+                font-size: 3.5rem;
+            }
+
             span {
                 background-image: linear-gradient(90deg, $color-active-secondary, #95BF3B);
                 -webkit-background-clip: text;
@@ -106,8 +149,26 @@
             }
         }
 
+        input {
+            color: $color-text;
+
+            &::placeholder {
+                color: $color-text;
+            }
+        }
+
         .btn {
             padding: 0.5rem 8.7rem 0;
+
+            @media #{$lg} {
+                height: 5.5rem;
+                margin-left: 0;
+            }
+
+            @media #{$md} {
+                width: 100%;
+                padding: 0.5rem 2rem 0;
+            }
         }
     }
 
@@ -121,6 +182,16 @@
         top: 0;
         left: 50%;
 
+        @media #{$lg} {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            border-radius: 0 0 2.5rem 2.5rem;
+            transform: none;
+            top: 0;
+            left: 0;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -129,6 +200,25 @@
             background: url(../images/callback-bg-decor-1.png) no-repeat center / contain;
             top: -7.4rem;
             left: 10.5rem;
+
+            @media #{$lg} {
+                content: none;
+            }
+
+            @media #{$md} {
+                content: '';
+                width: 100%;
+                height: auto;
+                background: url(../images/callback-bg-decor-1-mob.png) no-repeat center / contain;
+                aspect-ratio: 375 / 89;
+                z-index: 1;
+                top: -7rem;
+                left: 0;
+            }
+
+            @media #{$sm} {
+                top: -5rem;
+            }
         }
 
         &::after {
@@ -139,14 +229,43 @@
             background: url(../images/callback-bg-decor-2.png) no-repeat center / contain;
             top: -7.4rem;
             right: 22rem;
+
+            @media #{$lg} {
+                content: none;
+            }
+
+            @media #{$md} {
+                content: '';
+                width: auto;
+                height: calc(100% + 13rem);
+                aspect-ratio: 330 / 384;
+                background: url(../images/callback-bg-decor-2-mob.png) no-repeat center / contain;
+                z-index: -1;
+                transform: translateX(-50%);
+                top: -7.4rem;
+                left: 50%;
+                right: auto;
+            }
+
+            @media #{$sm} {
+                height: calc(100% + 8.8rem);
+                top: -5rem;
+            }
         }
 
-        img {
+        picture {
+            display: flex;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: center;
             border-radius: inherit;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: inherit;
+            }
         }
     }
 }

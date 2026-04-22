@@ -5,6 +5,17 @@
     padding-top: 27.2rem;
     margin-bottom: 13.5rem;
 
+    @media #{$lg} {
+        height: 62rem;
+        padding-top: 11.8rem;
+        margin-bottom: 5.5rem;
+        padding-bottom: 2.7rem;
+    }
+
+    @media #{$sm} {
+        overflow-x: hidden;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -20,15 +31,34 @@
         position: relative;
         display: flex;
         gap: 1rem;
+
+        @media #{$lg} {
+            flex-direction: column;
+            height: 100%;
+        }
     }
 
     &__content {
+        @media #{$lg} {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            z-index: 1;
+        }
+
         h2 {
             font-weight: 700;
             font-size: 9rem;
             line-height: 8rem;
             color: #fff;
             margin: 0 0 2.3rem;
+
+            @media #{$lg} {
+                font-size: 5.5rem;
+                line-height: 5.5rem;
+                margin: 0;
+            }
         }
     }
 
@@ -36,15 +66,32 @@
         display: flex;
         gap: 2.2rem;
 
+        @media #{$lg} {
+            gap: 1rem;
+        }
+
         .btn {
             width: 21.4rem;
             padding: 0.5rem 2rem 0;
+
+            @media #{$lg} {
+                font-size: 2rem;
+                width: 100%;
+            }
         }
     }
 
     &-percent {
         position: relative;
         margin-top: -1rem;
+
+        @media #{$lg} {
+            position: absolute;
+            margin-top: 0;
+            top: 10.7rem;
+            left: -3rem;
+            z-index: 1;
+        }
 
         &::before {
             content: '';
@@ -56,6 +103,20 @@
             transform: translateX(100%);
             top: -1.5rem;
             right: -2.8rem;
+
+            @media #{$lg} {
+                content: '%';
+                font-weight: 700;
+                font-size: 25rem;
+                line-height: 100%;
+                color: #fff;
+                text-shadow: 0 0.4rem 3rem rgba(#000, 0.25);
+                width: auto;
+                height: auto;
+                background: none;
+                top: 0;
+                right: 0;
+            }
         }
 
         p {
@@ -64,6 +125,10 @@
             line-height: 100%;
             color: #fff;
             text-shadow: 0 0.4rem 3rem rgba(#000, 0.25);
+
+            @media #{$lg} {
+                font-size: 25rem;
+            }
         }
     }
 
@@ -76,11 +141,31 @@
         right: 0;
         bottom: 0;
 
-        img {
+        @media #{$lg} {
+            width: 100%;
+        }
+
+        @media #{$md} {
+            width: 50.3rem;
+            height: 48rem;
+        }
+
+        @media #{$sm} {
+            right: auto;
+            left: 0;
+        }
+
+        picture {
+            display: flex;
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            object-position: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
         }
     }
 
@@ -92,6 +177,12 @@
         left: 0;
         bottom: -34.5rem;
 
+        @media #{$lg} {
+            width: 32rem;
+            height: 20.4rem;
+            bottom: 0;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -100,15 +191,29 @@
             background: url(../images/tree-bg.png) no-repeat center / contain;
             top: -4.8rem;
             left: 0;
+
+            @media #{$lg} {
+                content: none;
+            }
         }
 
-        img {
+        picture {
             position: relative;
+            display: flex;
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            object-position: center;
-            margin-left: -16.2rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+                margin-left: -16.2rem;
+
+                @media #{$lg} {
+                    margin-left: -5.7rem;
+                }
+            }
         }
     }
 
@@ -128,27 +233,51 @@
             object-fit: contain;
             object-position: center;
 
+            @media #{$lg} {
+                width: 52.8rem;
+                height: 23.2rem;
+            }
+
             &:first-of-type {
                 top: -14.5rem;
                 left: -23.6rem;
+
+                @media #{$lg} {
+                    top: -4.6rem;
+                    left: -1.4rem;
+                }
             }
 
             &:last-of-type {
                 top: 0;
                 right: -35.2rem;
+
+                @media #{$lg} {
+                    display: none;
+                }
             }
         }
     }
 
     &-bg {
         position: absolute;
+        display: flex;
         width: 100%;
         height: 102.3rem;
-        object-fit: cover;
-        object-position: center;
         pointer-events: none;
         z-index: -1;
         top: 0;
         left: 0;
+
+        @media #{$lg} {
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 }

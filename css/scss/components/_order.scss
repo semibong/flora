@@ -1,0 +1,9 @@
+.order {
+    .modal {
+        &__wrapper {
+            @media #{$lg} {
+                padding-right: 3rem;
+            }
+        }
+    }
+}

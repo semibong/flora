@@ -3,9 +3,17 @@
     overflow: hidden;
     margin-bottom: 16.5rem;
 
+    @media #{$lg} {
+        margin-bottom: 7.5rem;
+    }
+
     &__slider {
         position: relative;
         padding-bottom: 6.2rem;
+
+        @media #{$lg} {
+            display: none;
+        }
 
         .swiper {
             overflow: visible;
@@ -105,25 +113,44 @@
     }
 
     &-popup {
-        width: calc(100% - 2.8rem);
+        width: calc(100% - 3rem);
         background-color: rgba(#fff, 0.95);
         box-sizing: border-box;
         padding: 6rem 10rem 3rem;
         border: #fff 0.2rem solid;
         border-radius: 3em;
 
+        @media #{$lg} {
+            display: flex !important;
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            margin: 0 auto;
+        }
+
         &__slider {
             position: relative;
             width: 100%;
-
             padding-bottom: 3rem;
+
+            .swiper {
+                @media #{$lg} {
+                    overflow: visible;
+                }
+            }
         }
 
         &__item {
             display: flex;
             width: 100%;
             height: 30rem;
-            border-radius: 2rem;
+            border-radius: 5rem;
+            outline: none;
+
+            @media #{$lg} {
+                height: 25.5rem;
+            }
 
             img {
                 width: 100%;
@@ -141,6 +168,10 @@
             border-radius: 50%;
             top: 1.8rem;
             right: 1.8rem;
+
+            @media #{$lg} {
+                display: none;
+            }
 
             svg {
                 display: none;

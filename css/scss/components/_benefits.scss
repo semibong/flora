@@ -1,15 +1,35 @@
 .benefits {
     margin-bottom: 8.5rem;
 
+    .title {
+        @media #{$lg} {
+            padding-left: 0.8rem;
+            margin-bottom: -5.5rem;
+        }
+    }
+
     &__wrapper {
         background: url(../images/benefits-bg.png) no-repeat center / cover;
         padding: 4rem 0 6.5rem;
+        
+        @media #{$lg} {
+            padding: 7rem 0 1.5rem;
+            background-position: left;
+        }
     }
 
     &__content {
         display: flex;
         flex-wrap: wrap;
         gap: 2.4rem;
+
+        @media #{$lg} {
+            gap: 1rem;
+        }
+
+        @media #{$md} {
+            gap: 0.5rem;
+        }
     }
 
     &__item {
@@ -25,11 +45,27 @@
         border: #fff 0.2rem solid;
         border-radius: 6rem;
 
+        @media #{$lg} {
+            gap: 2.7rem;
+            width: calc(50% - 0.5rem);
+            height: 7.5rem;
+            padding-left: 2.5rem;
+            border-radius: 3rem;
+        }
+
+        @media #{$md} {
+            width: 100%;
+        }
+
         &-image {
             display: flex;
             justify-content: end;
             width: 5.2rem;
             height: 5.2rem;
+
+            @media #{$lg} {
+                justify-content: center;
+            }
 
             img {
                 height: 100%;
@@ -44,6 +80,10 @@
             line-height: 100%;
             color: $color-text;
             padding-top: 0.5rem;
+
+            @media #{$lg} {
+                font-size: 2.5rem;
+            }
         }
     }
 }

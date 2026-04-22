@@ -1,10 +1,19 @@
 .catalog {
     position: relative;
     margin-bottom: 13.5rem;
+    overflow: hidden;
+
+    @media #{$lg} {
+        margin-bottom: 7rem;
+    }
 
     &__slider {
         position: relative;
         padding-bottom: 6rem;
+
+        @media #{$lg} {
+            padding-bottom: 3.2rem;
+        }
 
         .swiper {
             overflow: visible;
@@ -13,6 +22,11 @@
                 transition: opacity .5s ease-in-out, scale .5s ease-in-out;
                 opacity: 0;
                 scale: 0.8;
+
+                @media #{$lg} {
+                    opacity: 1;
+                    scale: 1;
+                }
             }
 
             &-slide-active,
@@ -34,6 +48,10 @@
             transform: translate(-50%, -50%);
             top: calc(50% - 3rem);
             left: 50%;
+
+            @media #{$lg} {
+                display: none;
+            }
         }
     }
 
@@ -50,6 +68,14 @@
         border: #fff 0.2rem solid;
         border-radius: 0 5rem 5rem 5rem;
         transition: all .2s linear;
+
+        @media #{$lg} {
+            max-width: none;
+            background-color: rgba(#fff, 0.3);
+            backdrop-filter: none;
+            box-shadow: 0 0 6rem 0 rgba(#000, 0.05);
+            padding: 2rem 2rem 3.5rem;
+        }
 
         &:hover {
             background-color: rbga(#fff, 0.3);
@@ -107,6 +133,10 @@
             height: 17.5rem;
             margin-bottom: 6rem;
 
+            @media #{$lg} {
+                margin-bottom: 4rem;
+            }
+
             img {
                 width: 100%;
                 height: 100%;
@@ -120,6 +150,10 @@
             flex-direction: column;
             justify-content: end;
             min-height: 7.35rem;
+
+            @media #{$lg} {
+                padding-left: 1rem;
+            }
         }
 
         &-price {
@@ -178,10 +212,23 @@
         border: #fff 0.2rem solid;
         border-radius: 5rem;
 
+        @media #{$lg} {
+            flex-direction: column;
+            gap: 2rem;
+            padding: 5rem 2rem 2rem;
+            border-radius: 3rem;
+            margin: 0 1.5rem;
+        }
+
         &-image {
             display: flex;
             width: 52.8rem;
             height: auto;
+
+            @media #{$lg} {
+                max-width: 40rem;
+                width: 100%;
+            }
 
             img {
                 width: 100%;
@@ -192,8 +239,21 @@
         }
 
         &__content {
-            .catalog__card-bottom {
-                margin-bottom: 3.5rem;
+            .catalog__card {
+                &-top {
+                    @media #{$lg} {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+
+                &-bottom {
+                    margin-bottom: 3.5rem;
+
+                    @media #{$lg} {
+                        padding-left: 0;
+                        margin-bottom: 1.5rem;
+                    }
+                }
             }
 
             .btn {
@@ -208,6 +268,13 @@
             border-radius: 50%;
             top: 1.8rem;
             right: 1.8rem;
+
+            @media #{$lg} {
+                width: 3.7rem;
+                height: 3.7rem;
+                top: 0.8rem;
+                right: 1.5rem;
+            }
 
             svg {
                 display: none;

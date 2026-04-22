@@ -7,6 +7,12 @@
     top: 0;
     left: 0;
 
+    @media #{$lg} {
+        position: fixed;
+        height: 6rem;
+        margin-top: 0;
+    }
+
     &__content {
         position: relative;
         display: flex;
@@ -21,6 +27,13 @@
         border-radius: 10rem;
         margin: 0 auto;
 
+        @media #{$lg} {
+            max-width: none;
+            background-color: rgba($color-background, 0.9);
+            padding: 0.8rem 3rem 1rem 1.5rem;
+            border-radius: 0;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -34,6 +47,45 @@
             -webkit-mask-composite: xor;
             mask-composite: exclude;
             pointer-events: none;
+
+            @media #{$lg} {
+                padding: 0 1px 1px 1px;
+            }
+        }
+    }
+
+    &__burger-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.2rem;
+        width: 3.1rem;
+        height: 100%;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+
+        @media #{$lg} {
+            display: flex;
+        }
+
+        &:hover {
+            span {
+                background-color: $color-active;
+            }
+        }
+
+        span {
+            width: 100%;
+            height: 0.2rem;
+            background-color: $color-primary;
+            border-radius: 1rem;
+            transition: all .2s linear;
+
+            &:last-of-type {
+                width: 2.4rem;
+            }
         }
     }
 
@@ -45,6 +97,11 @@
         height: 100%;
         margin-right: 12.8rem;
         outline: none;
+
+        @media #{$lg} {
+            margin-right: 0;
+            margin-left: 2.8rem;
+        }
 
         img {
             width: 100%;
@@ -59,6 +116,10 @@
             pointer-events: none;
             top: -2rem;
             left: -3.2rem;
+
+            @media #{$lg} {
+                display: none;
+            }
 
             span {
                 position: absolute;
@@ -90,6 +151,10 @@
     .menu {
         height: 5.5rem;
 
+        @media #{$lg} {
+            display: none;
+        }
+
         ul li a {
             border-radius: 10rem;
 
@@ -102,14 +167,6 @@
     .phone {
         margin-left: auto;
 
-        &__image {
-            z-index: 1;
-        }
-
-        &__content {
-            z-index: 1;
-        }
-
         &::before {
             content: '';
             position: absolute;
@@ -120,6 +177,10 @@
             clip-path: polygon( 0% 50%,0% 50%,0.149% 41.89%,0.581% 34.196%,1.273% 27.022%,2.2% 20.471%,3.339% 14.645%,4.668% 9.647%,6.161% 5.581%,7.797% 2.549%,9.551% 0.654%,11.401% 0%,100% 0%,100% 0%,99.702% 16.221%,98.838% 31.608%,97.455% 45.956%,95.601% 59.059%,93.322% 70.711%,90.665% 80.706%,87.677% 88.838%,84.406% 94.902%,80.897% 98.691%,77.199% 100%,11.401% 100%,11.401% 100%,9.551% 99.346%,7.797% 97.451%,6.161% 94.419%,4.668% 90.353%,3.339% 85.355%,2.2% 79.529%,1.273% 72.978%,0.581% 65.804%,0.149% 58.11%,0% 50% );
             top: -0.8rem;
             left: -1.8rem;
+
+            @media #{$lg} {
+                content: none;
+            }
         }
 
         &::after {
@@ -131,6 +192,78 @@
             clip-path: polygon( 0% 56.79%,0% 56.79%,0.149% 49.781%,0.581% 43.132%,1.273% 36.933%,2.2% 31.271%,3.339% 26.236%,4.668% 21.917%,6.161% 18.403%,7.797% 15.783%,9.551% 14.146%,11.401% 13.58%,100% 0%,100% 13.58%,100% 13.58%,99.702% 27.598%,98.838% 40.896%,97.455% 53.295%,95.601% 64.619%,93.322% 74.688%,90.665% 83.326%,87.677% 90.354%,84.406% 95.594%,80.897% 98.869%,77.199% 100%,11.401% 100%,11.401% 100%,9.551% 99.434%,7.797% 97.797%,6.161% 95.177%,4.668% 91.663%,3.339% 87.344%,2.2% 82.309%,1.273% 76.648%,0.581% 70.448%,0.149% 63.799%,0% 56.79% );
             top: -1.9rem;
             left: -0.2rem;
+
+            @media #{$lg} {
+                content: none;
+            }
+        }
+
+        &__image {
+            z-index: 1;
+
+            @media #{$lg} {
+                display: none;
+            }
+        }
+
+        &__content {
+            z-index: 1;
+
+            @media #{$lg} {
+                margin-top: 0;
+            }
+        }
+
+        &-call {
+            @media #{$lg} {
+                display: none;
+            }
+        }
+
+        &-order {
+            @media #{$lg} {
+                position: relative;
+                width: 2.8rem;
+                height: 2.8rem;
+                font-size: 0;
+            }
+
+            &:hover {
+                &::before {
+                    @media #{$lg} {
+                        opacity: 0;
+                    }
+                }
+
+                &::after {
+                    @media #{$lg} {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &::before, &::after {
+                content: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transition: all .2s linear;
+                top: 0;
+                left: 0;
+
+                @media #{$lg} {
+                    content: '';
+                }
+            }
+
+            &::before {
+                background: url(../images/svg/phone-icon.svg) no-repeat center / contain;
+            }
+
+            &::after {
+                background: url(../images/svg/phone-active-icon.svg) no-repeat center / contain;
+                opacity: 0;
+            }
         }
     }
 
@@ -138,7 +271,7 @@
         position: fixed;
         width: 100%;
         height: 7rem;
-        background-color: rgba(#FAF7F0, 0.9);
+        background-color: rgba($color-background, 0.9);
         backdrop-filter: blur(4px);
         box-sizing: border-box;
         border-bottom: #fff 1px solid;
@@ -146,6 +279,10 @@
         z-index: 100;
         top: 0;
         left: 0;
+
+        @media #{$lg} {
+            display: none;
+        }
 
         &-invisible {
             pointer-events: none;

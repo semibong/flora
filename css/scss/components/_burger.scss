@@ -2,6 +2,10 @@
     .modal {
         &__wrapper {
             padding-right: 17.5rem;
+
+            @media #{$lg} {
+                padding-right: 7rem;
+            }
         }
     }
 
@@ -11,11 +15,21 @@
             align-items: start;
             gap: 4rem;
 
+            @media #{$lg} {
+                gap: 3.2rem;
+            }
+
             li {
                 a {
                     font-weight: 400;
                     font-size: 4rem;
                     padding: 0;
+
+                    @media #{$lg} {
+                        font-family: $font-second;
+                        text-transform: uppercase;
+                        font-size: 2rem;
+                    }
                 }
             }
         }

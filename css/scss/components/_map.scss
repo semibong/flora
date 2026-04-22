@@ -1,6 +1,10 @@
 .map {
     margin-bottom: 13rem;
 
+    @media #{$lg} {
+        margin-bottom: 5rem;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -21,6 +25,12 @@
         margin-bottom: -3.3rem;
         z-index: 1;
 
+        @media #{$lg} {
+            justify-content: center;
+            width: 100%;
+            padding: 0;
+        }
+
         svg {
             width: 2.4rem;
             height: 2.4rem;
@@ -31,6 +41,10 @@
             font-weight: 600;
             font-size: 2rem;
             color: $color-primary;
+
+            @media #{$lg} {
+                font-size: 1.8rem;
+            }
         }
     }
 
@@ -45,9 +59,14 @@
 
         &:hover {
             &::before {
-                height: calc(100% + 10rem);
+                width: calc(100% + 10rem);
+                height: calc(100% + 20rem);
                 box-shadow: inset 0px 0px 200px 100px $color-background, 0px 0px 0px 750px rgba($color-background, 0.9);
                 opacity: 0;
+
+                @media #{$lg} {
+                    width: calc(100% + 20rem);
+                }
             }
         }
 
@@ -64,6 +83,10 @@
             transform: translate(-50%, -50%);
             top: 50%;
             left: 50%;
+
+            @media #{$lg} {
+                width: calc(100% + 10rem);
+            }
         }
 
         //

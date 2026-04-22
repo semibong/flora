@@ -100,7 +100,7 @@ a {
     margin: 0 auto;
 
     @media #{$lg} {
-        width: calc(100% - 2.8rem);
-        margin: 0 1.4rem;
+        width: calc(100% - 3rem);
+        margin: 0 1.5rem;
     }
 }

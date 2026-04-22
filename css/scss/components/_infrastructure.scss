@@ -1,68 +1,119 @@
 .infrastructure {
     margin-bottom: 15rem;
 
+    @media #{$lg} {
+        margin-bottom: 11rem;
+    }
+
     &-sections {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        gap: 3.5rem;
-        background-color: rgba(#fff, 0.3);
-        box-sizing: border-box;
-        padding: 1.6rem 0.8rem 1.6rem 1.6rem;
-        border: #fff 0.2rem solid;
-        border-radius: 10rem;
+        position: relative;
         margin: 0 0 3.2rem;
 
-        .btn {
-            height: 4.8rem;
-            padding: 0.5rem 5.7rem 0;
+        @media #{$lg} {
+            width: calc(100% + 1.5rem);
+            margin: 0 0 2rem;
         }
 
-        .slider-arrow {
-            width: 6.4rem;
-            height: 6.4rem;
+        &::before {
+            content: none;
+            position: absolute;
+            width: 8rem;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, $color-background);
+            pointer-events: none;
+            z-index: 1;
+            top: 0;
+            right: 0;
 
-            &::before {
-                opacity: 0;
-            }
-
-            &::after {
-                opacity: 1;
+            @media #{$lg} {
+                content: '';
             }
         }
 
-        li {
-            a:not(.btn) {
-                font-family: $font-second;
-                font-size: 1.6rem;
-                color: $color-text;
-                text-wrap: nowrap;
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 3.5rem;
+            background-color: rgba(#fff, 0.3);
+            box-sizing: border-box;
+            padding: 0.8rem 0.8rem 0.8rem 1.6rem;
+            border: #fff 0.2rem solid;
+            border-radius: 10rem;
+            margin: 0;
 
-                &:hover, &.active {
-                    color: $color-active;
+            @media #{$lg} {
+                gap: 2.5rem;
+                padding: 0.5rem;
+                border-right: none;
+                border-radius: 10rem 0 0 10rem;
+                overflow-y: scroll;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .btn {
+                height: 4.8rem;
+                padding: 0.5rem 5.7rem 0;
+
+                @media #{$lg} {
+                    padding: 0.5rem 3.7rem 0;
                 }
+            }
 
-                &.active {
-                    svg {
-                        path {
-                            fill: $color-active;
-                        }
+            .slider-arrow {
+                width: 6.4rem;
+                height: 6.4rem;
 
-                        circle {
-                            fill: $color-primary;
-                        }
-                    }
-                }
-
-                svg {
+                @media #{$lg} {
                     width: 5rem;
                     height: 5rem;
+                }
 
-                    path, circle {
-                        transition: all .2s linear;
+                &::before {
+                    opacity: 0;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            li {
+                a:not(.btn) {
+                    font-family: $font-second;
+                    font-size: 1.6rem;
+                    color: $color-text;
+                    text-wrap: nowrap;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    &:hover, &.active {
+                        color: $color-active;
+                    }
+
+                    &.active {
+                        svg {
+                            path {
+                                fill: $color-active;
+                            }
+
+                            circle {
+                                fill: $color-primary;
+                            }
+                        }
+                    }
+
+                    svg {
+                        width: 5rem;
+                        height: 5rem;
+
+                        path, circle {
+                            transition: all .2s linear;
+                        }
                     }
                 }
             }
@@ -78,6 +129,11 @@
         border: #fff 0.5rem solid;
         border-radius: 6rem;
         overflow: hidden;
+
+        @media #{$lg} {
+            height: 38rem;
+            border-radius: 3rem;
+        }
 
         //
         img {

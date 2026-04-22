@@ -2,9 +2,20 @@
     position: relative;
     margin-bottom: 15rem;
 
+    @media #{$lg} {
+        margin-bottom: 7rem;
+        overflow: hidden;
+    }
+
     &__wrapper {
         position: relative;
         min-height: 75.5rem;
+
+        @media #{$lg} {
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
     }
 
     &::before {
@@ -17,6 +28,10 @@
         z-index: 1;
         top: -6rem;
         left: 0;
+
+        @media #{$lg} {
+            content: none;
+        }
     }
 
     &__content {
@@ -25,6 +40,12 @@
         justify-content: space-between;
         gap: 4.5rem;
         z-index: 2;
+
+        @media #{$lg} {
+            flex-direction: column;
+            gap: 2.5rem;
+            margin-bottom: -5rem;
+        }
     }
 
     &-text {
@@ -32,6 +53,11 @@
         font-size: 1.6rem;
         line-height: 2.2rem;
         color: $color-text;
+
+        @media #{$lg} {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+        }
     }
 
     &-logo {
@@ -40,6 +66,12 @@
         width: 54rem;
         height: 16.7rem;
         margin-top: -5rem;
+
+        @media #{$lg} {
+            width: 20.3rem;
+            height: 6.3rem;
+            margin-top: 0;
+        }
 
         img {
             width: 100%;
@@ -57,6 +89,17 @@
         left: 0;
         bottom: 0;
 
+        @media #{$lg} {
+            position: relative;
+            width: calc(100% + 1rem);
+            height: auto;
+            left: -0.5rem;
+        }
+
+        @media #{$md} {
+            aspect-ratio: 355 / 340;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -66,14 +109,34 @@
             z-index: -1;
             top: -17rem;
             right: -20rem;
+
+            @media #{$lg} {
+                width: calc(100% + 2rem);
+                height: auto;
+                background: url(../images/about-bg-mob.png) no-repeat center / contain;
+                aspect-ratio: 375 / 457;
+                top: -12rem;
+                left: -1rem;
+                right: auto;
+            }
         }
 
         &-image {
+            display: flex;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 15rem 0 15rem 15rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 15rem 0 15rem 15rem;
+
+                @media #{$lg} {
+                    border-radius: 0 0 5rem 5rem;
+                }
+            }
         }
 
         &-tree {
@@ -84,6 +147,10 @@
             object-position: center;
             bottom: 0.5rem;
             right: -9.4rem;
+
+            @media #{$lg} {
+                display: none;
+            }
         }
     }
 }
