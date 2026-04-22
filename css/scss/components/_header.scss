@@ -93,12 +93,14 @@
         flex-shrink: 0;
         position: relative;
         display: flex;
-        width: auto;
-        height: 100%;
+        width: 22.9rem;
+        height: 7.1rem;
         margin-right: 12.8rem;
         outline: none;
 
         @media #{$lg} {
+            width: 13.5rem;
+            height: 4.2rem;
             margin-right: 0;
             margin-left: 2.8rem;
         }
@@ -298,7 +300,7 @@
 
         &__logo {
             display: flex;
-            width: auto;
+            width: 16.1rem;
             height: 5rem;
 
             img {
