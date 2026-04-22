@@ -58,6 +58,7 @@ $(document).ready(function() {
         const burger = $('.burger');
         const body = $('body');
         
+        $('.modal').removeClass('modal-opened');
         burger.toggleClass('modal-opened');
 
         if (burger.hasClass('modal-opened')) {

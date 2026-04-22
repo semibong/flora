@@ -5,5 +5,11 @@
                 padding-right: 3rem;
             }
         }
+
+        &-decor {
+            @media #{$lg} {
+                bottom: -8rem;
+            }
+        }
     }
 }

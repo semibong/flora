@@ -1555,6 +1555,11 @@ a:hover {
     padding-right: 3rem;
   }
 }
+@media (max-width: 992px) {
+  .order .modal-decor {
+    bottom: -8rem;
+  }
+}
 
 .hero {
   position: relative;
