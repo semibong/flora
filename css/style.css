@@ -722,6 +722,11 @@ a:hover {
   position: absolute;
   top: -15rem;
 }
+@media (max-width: 992px) {
+  .anchor {
+    top: -8rem;
+  }
+}
 
 .modal {
   position: fixed;

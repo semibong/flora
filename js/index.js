@@ -18,6 +18,10 @@ $(document).ready(function() {
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
 
+            $('.modal').removeClass('modal-opened');
+            $('body').removeClass('noscroll');
+            window.scroll(0, scrollTop);
+
             if (targetElement) {
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                 const startPosition = window.pageYOffset;
@@ -82,7 +86,7 @@ $(document).ready(function() {
         body.css('top', `-${scrollTop}px`);
     });
 
-    $('.modal-close, .modal-space, .menu a').on('click', function () {
+    $('.modal-close, .modal-space').on('click', function () {
         $('.modal').removeClass('modal-opened');
         $('body').removeClass('noscroll');
         window.scroll(0, scrollTop);
