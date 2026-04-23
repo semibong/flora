@@ -744,6 +744,9 @@ a:hover {
   pointer-events: all;
   opacity: 1;
 }
+.modal-opened .modal__wrapper {
+  transform: none;
+}
 .modal__wrapper {
   position: relative;
   width: max-content;
@@ -754,6 +757,8 @@ a:hover {
   padding: 5.7rem 9rem 11rem 29.5rem;
   border: rgba(255, 255, 255, 0.5) 1rem solid;
   border-radius: 0 17.3rem 17.3rem 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-50%);
   z-index: 1;
 }
 @media (max-width: 992px) {
@@ -895,7 +900,7 @@ a:hover {
 }
 @media (max-width: 992px) {
   .modal-space {
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 

@@ -17,6 +17,13 @@
     &-opened {
         pointer-events: all;
         opacity: 1;
+
+        .modal__wrapper {
+            transform: none;
+            @media #{$lg} {
+                
+            }
+        }
     }
 
     &__wrapper {
@@ -29,6 +36,8 @@
         padding: 5.7rem 9rem 11rem 29.5rem;
         border: rgba(#fff, 0.5) 1rem solid;
         border-radius: 0 17.3rem 17.3rem 0;
+        transition: transform .3s ease-in-out;
+        transform: translateX(-50%);
         z-index: 1;
 
         @media #{$lg} {
@@ -175,7 +184,7 @@
         left: 0;
 
         @media #{$lg} {
-            backdrop-filter: blur(10px);
+            background-color: rgba(#000, 0.3);
         }
     }
 }
