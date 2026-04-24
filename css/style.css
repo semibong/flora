@@ -220,6 +220,11 @@ body::-webkit-scrollbar {
   width: 1.5rem;
   background-color: #FAF7F0;
 }
+@media (max-width: 992px) {
+  body::-webkit-scrollbar {
+    width: 1rem;
+  }
+}
 body::-webkit-scrollbar-thumb {
   background-color: #7BAE4D;
   border-radius: 0.5rem;

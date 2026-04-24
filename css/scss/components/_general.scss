@@ -46,6 +46,10 @@ body {
         width: 1.5rem;
         background-color: $color-background;
 
+        @media #{$lg} {
+            width: 1rem;
+        }
+
         &-thumb {
             background-color: $color-active-secondary;
             border-radius: 0.5rem;
